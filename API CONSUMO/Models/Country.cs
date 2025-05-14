@@ -3,6 +3,10 @@
     public class Country
     {
         public countryName name { get; set; }
+        public Boolean independent { get; set; }
+        public string region { get; set; }
+        public string subregion { get; set; }
+
     }
     public class  countryName
     {
