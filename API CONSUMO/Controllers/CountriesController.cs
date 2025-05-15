@@ -1,12 +1,18 @@
-﻿using Microsoft.AspNetCore.Mvc;
-
+﻿using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Mvc;
+using API_CONSUMO.Repository;
 namespace API_CONSUMO.Controllers
 {
-    public class CountriesController : Controller
+    [Route("api/[controller]")]
+    [ApiController]
+    public class CountriesController : ControllerBase
     {
-        public IActionResult Index()
+        private CountryRepository _repo;
+
+        [HttpGet]
+        public IActionResult GetCountryList()
         {
-            return View();
+
         }
     }
 }
