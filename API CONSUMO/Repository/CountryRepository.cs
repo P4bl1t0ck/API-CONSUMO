@@ -17,11 +17,13 @@ namespace API_CONSUMO.Repository
         // GET: api/<CountryRepository>
         public async Task<IEnumerable<Country>> GetCountryListAsync()
         {
-            string url = "https://restcountries.com/v3.1/all";
-            string response_json = await _httpClient.GetStringAsync(url);
-            //Hasta aki estaba correcto
-            List<Country> countries = JsonConvert.DeserializeObject<List<Country>>(response_json);
-            return countries;
+           
+                string url = "https://restcountries.com/v3.1/all";
+                string response_json = await _httpClient.GetStringAsync(url);
+                //Hasta aki estaba correcto
+                List<Country> countries = JsonConvert.DeserializeObject<List<Country>>(response_json);
+                return countries;
+            
         }
     }
 }
